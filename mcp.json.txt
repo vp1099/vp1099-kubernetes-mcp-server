@@ -26,6 +26,11 @@
       "name": "Kubernetes MCP Server",
       "url": "http://localhost:8000/mcp/"
     },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    
+  },
 
 	"openai": {
 		"command": "npx",
