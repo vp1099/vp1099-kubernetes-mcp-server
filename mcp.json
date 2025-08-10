@@ -1,0 +1,57 @@
+{
+	"servers": {
+		"mcp-server-time": {
+			"command": "python",
+			"args": [
+				"-m",
+				"mcp_server_time",
+				"--local-timezone=Asia/Kolkata"
+			],
+			"env": {},
+			"type": "stdio"
+		},
+		"kite": {
+			"url": "https://mcp.kite.trade/sse",
+			"type": "http"
+		},
+		"kubernetes": {
+			"command": "npx",
+			"args": [
+				"mcp-server-kubernetes"
+			],
+			"type": "stdio"
+		},
+
+	"kubernetes-local": {
+      "name": "Kubernetes MCP Server",
+      "url": "http://localhost:8000/mcp/"
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    
+  },
+    "bitbucket": {
+      "command": "npx",
+      "args": ["-y", "@aashari/mcp-server-atlassian-bitbucket"],
+      "env": {
+        "ATLASSIAN_SITE_NAME": "your-company",
+        "ATLASSIAN_USER_EMAIL": "your.email@company.com",
+        "ATLASSIAN_API_TOKEN": "your_api_token"
+      }
+    },
+
+	"openai": {
+		"command": "npx",
+		"args": ["mcp-server-openai"],
+		
+			"type": "stdio"
+	},
+	"github": {
+		"command": "npx",
+		"args": ["mcp-server-github"],
+		"type": "stdio"
+	}
+	},
+	"inputs": []
+}
