@@ -1,0 +1,33 @@
+python is mandatory
+
+pip install fastmcp
+
+
+make sure python and fastmcp are these in env variables path.
+
+try running python and fastmcp from current path
+
+
+kubectl is mandatory
+
+
+connect to your openshift cluster using token and switch to namespace
+
+
+make sure kubectl-remote mcp server is added to mcp.json
+
+
+
+run the python file to start the mcp server
+
+python "c:\Users\Vishnu Prakash\kube_mcp_server.py"
+
+or just
+python kube_mcp_server.py
+
+
+now the mcp server is running and you can check the mcp tools are lisitng.
+
+
+
+now you can interact with your openshift namespace using the mcpserver using GitHub copilot.

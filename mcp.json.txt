@@ -1,0 +1,43 @@
+{
+	"servers": {
+		"mcp-server-time": {
+			"command": "python",
+			"args": [
+				"-m",
+				"mcp_server_time",
+				"--local-timezone=Asia/Kolkata"
+			],
+			"env": {},
+			"type": "stdio"
+		},
+		"kite": {
+			"url": "https://mcp.kite.trade/sse",
+			"type": "http"
+		},
+		"kubernetes": {
+			"command": "npx",
+			"args": [
+				"mcp-server-kubernetes"
+			],
+			"type": "stdio"
+		},
+
+	"kubernetes-local": {
+      "name": "Kubernetes MCP Server",
+      "url": "http://localhost:8000/mcp/"
+    },
+
+	"openai": {
+		"command": "npx",
+		"args": ["mcp-server-openai"],
+		
+			"type": "stdio"
+	},
+	"github": {
+		"command": "npx",
+		"args": ["mcp-server-github"],
+		"type": "stdio"
+	}
+	},
+	"inputs": []
+}
